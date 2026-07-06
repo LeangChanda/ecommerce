@@ -1,0 +1,45 @@
+{{ form_start(form) }}
+
+<div class="row">
+
+    <div class="col-md-6 mb-3">
+        {{ form_label(form.name) }}
+        {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.name) }}
+    </div>
+
+    <div class="col-md-6 mb-3">
+        {{ form_label(form.slug) }}
+        {{ form_widget(form.slug, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.slug) }}
+    </div>
+
+    <div class="col-12 mb-3">
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description, {'attr': {'class': 'form-control', 'rows': 5}}) }}
+        {{ form_errors(form.description) }}
+    </div>
+
+    <div class="col-md-6 mb-3">
+        {{ form_label(form.image) }}
+        {{ form_widget(form.image, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.image) }}
+    </div>
+
+    <div class="col-md-6 mb-3 d-flex align-items-center">
+        <div class="form-check mt-4">
+            {{ form_widget(form.isActive, {'attr': {'class': 'form-check-input'}}) }}
+            {{ form_label(form.isActive, null, {'label_attr': {'class': 'form-check-label'}}) }}
+        </div>
+    </div>
+
+</div>
+
+<div class="text-end mt-4">
+    <button class="btn btn-success">
+        <i class="bi bi-check-circle"></i>
+        {{ button_label|default('Save Category') }}
+    </button>
+</div>
+
+{{ form_end(form) }}

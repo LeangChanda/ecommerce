@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fresh Shop{% endblock %}
+
+{% block body %}
+
+{{ include('components/_hero.html.twig') }}
+
+{{ include('components/_categories.html.twig', {
+    categories: categories
+}) }}
+
+{{ include('components/_banner.html.twig') }}
+
+{{ include('components/_latest_products.html.twig', {
+    products: latestProducts
+}) }}
+
+<h2 class="mt-5 mb-4">Featured Products</h2>
+
+<div class="row">
+    {% for product in featuredProducts %}
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            {{ include('components/_product_card.html.twig',{product:product}) }}
+        </div>
+    {% endfor %}
+</div>
+
+{% for category in categories %}
+
+{{ include('components/_category_products.html.twig',{
+    category:category,
+    products:categoryProducts[category.id]
+}) }}
+
+{% endfor %}
+
+{{ include('components/_features.html.twig') }}
+
+{% endblock %}

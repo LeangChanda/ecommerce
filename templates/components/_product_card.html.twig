@@ -1,0 +1,38 @@
+<div class="card border-0 shadow-sm h-100">
+
+    {% if product.image %}
+        <img src="{{ asset(product.image) }}"
+             class="card-img-top"
+             style="height:220px;object-fit:cover;">
+    {% endif %}
+
+    <div class="card-body">
+
+        <span class="badge bg-success mb-2">
+            {{ product.category.name }}
+        </span>
+
+        <h5>{{ product.name }}</h5>
+
+        <p class="text-muted">
+            {{ product.shortDescription|slice(0,60) }}
+        </p>
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <span class="fw-bold text-success">
+                ${{ product.price|number_format(2) }}
+            </span>
+
+            <a href="{{ path('app_product_show',{
+                id:product.id
+            }) }}"
+               class="btn btn-success btn-sm">
+                View
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

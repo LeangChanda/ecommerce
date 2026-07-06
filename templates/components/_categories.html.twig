@@ -1,0 +1,31 @@
+<h2 class="mb-4">Shop by Category</h2>
+
+<div class="row">
+
+{% for category in categories %}
+
+<div class="col-lg-2 col-md-3 col-6 mb-4">
+
+    <div class="card border-0 shadow-sm text-center h-100">
+
+        <div class="card-body">
+
+            {% if category.image %}
+                <img src="{{ asset(category.image) }}"
+                     class="rounded-circle mb-3"
+                     width="80"
+                     height="80"
+                     style="object-fit:cover;">
+            {% endif %}
+
+            <h6>{{ category.name }}</h6>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>

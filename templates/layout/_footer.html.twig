@@ -1,0 +1,89 @@
+<footer class="bg-dark text-light mt-5">
+    <div class="container py-5">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <h5>E-Commerce</h5>
+                <p class="text-secondary">
+                    Your one-stop destination for quality products at affordable prices.
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5>Quick Links</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="{{ path('site_top') }}" class="text-decoration-none text-light">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ path('app_product_index') }}" class="text-decoration-none text-light">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ path('app_category_index') }}" class="text-decoration-none text-light">
+                            Categories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-decoration-none text-light">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5>Contact Us</h5>
+
+                <p class="mb-1">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Phnom Penh, Cambodia
+                </p>
+
+                <p class="mb-1">
+                    <i class="bi bi-envelope-fill"></i>
+                    info@example.com
+                </p>
+
+                <p class="mb-3">
+                    <i class="bi bi-telephone-fill"></i>
+                    +855 12 345 678
+                </p>
+
+                <div>
+                    <a href="#" class="text-light fs-5 me-3">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="text-light fs-5 me-3">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#" class="text-light fs-5 me-3">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="#" class="text-light fs-5">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <div class="text-center text-secondary">
+            &copy; {{ "now"|date("Y") }} E-Commerce. All Rights Reserved.
+        </div>
+
+    </div>
+</footer>

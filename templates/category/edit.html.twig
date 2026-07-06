@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Category{% endblock %}
+
+{% block body %}
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <div class="card shadow border-0 rounded-4">
+
+                <div class="card-header bg-warning">
+                    <h2 class="mb-0">
+                        <i class="bi bi-pencil-square me-2"></i>
+                        Edit Category
+                    </h2>
+                </div>
+
+                <div class="card-body p-4">
+
+                    {{ include('category/_form.html.twig', {
+                        button_label: 'Update Category'
+                    }) }}
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between">
+
+                        <a href="{{ path('app_category_index') }}"
+                           class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left"></i>
+                            Back to List
+                        </a>
+
+                        {{ include('category/_delete_form.html.twig') }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

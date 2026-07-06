@@ -1,0 +1,33 @@
+<section class="py-5">
+
+    <div class="container">
+
+        <h2 class="mb-4">
+            Categories
+        </h2>
+
+        <div class="row">
+
+            {% for i in 1..8 %}
+
+                <div class="col-md-3 mb-3">
+
+                    <div class="card text-center">
+
+                        <div class="card-body">
+
+                            Category {{ i }}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
